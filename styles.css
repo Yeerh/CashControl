@@ -1,0 +1,216 @@
+/* Reset de margens e paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #33E59B; /* Cor de fundo do cabeçalho */
+    color: black; /* Cor das letras para preto */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Logo */
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.logo-control {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.logo-cash {
+    font-size: 2rem;
+}
+
+/* Navegação do cabeçalho */
+nav ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: black; /* Alterado para cor preta */
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+/* Caixa de pesquisa */
+.search-container {
+    position: relative;
+}
+
+.search-input {
+    padding: 6px 30px 6px 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    width: 150px;
+    background-color: white;
+    color: #333;
+}
+
+/* Login e Ícone de usuário */
+.login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login i {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.login a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Navegação interna para h1 e h2 */
+.page-nav {
+    margin: 20px 0;
+    text-align: center;
+}
+
+.page-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+.page-nav ul li {
+    margin: 0 15px;
+}
+
+.page-nav ul li a {
+    color: #33E59B;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.page-nav ul li a:hover {
+    color: #28a745;
+}
+
+/* Conteúdo Principal */
+main {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    padding: 40px;
+    background-color: #fff;
+}
+
+.main-content {
+    width: 60%;
+}
+
+.main-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #33E59B;
+    padding-bottom: 10px;
+}
+
+.main-content .subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.cta-button {
+    padding: 12px 30px;
+    font-size: 18px;
+    background-color: #CBD0B8;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #A1B08C;
+}
+
+.sidebar {
+    width: 35%;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar h2 {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    border-bottom: 3px solid #33E59B;
+    padding-bottom: 10px;
+}
+
+.sidebar p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Rodapé */
+footer {
+    background-color: #33E59B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+}
+/* Estilo do item de login */
+.login {
+    display: flex;
+    flex-direction: column; /* Organiza o ícone e o texto em coluna */
+    align-items: center; /* Centraliza o ícone e o texto */
+    margin-left: auto; /* Empurra o "login" para a direita */
+}
+
+.user-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 5px; /* Espaço entre o ícone e o nome */
+}
