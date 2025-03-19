@@ -94,21 +94,18 @@ header {
 /* Container de Login */
 .login-container {
     text-align: center;
-    margin-left: 10px; /* Aproxima o link Login da imagem do usuário */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* Link de Login */
-.login-link-container {
-    margin-top: 5px;
-}
-
 .login-link {
     font-family: 'Poppins', sans-serif;
     font-weight: bold;
     text-decoration: none;
     color: black;
-    display: inline-block;
-    text-align: center;
+    margin-top: 5px; /* Garante que o link de Login fique abaixo da imagem */
 }
 
 /* Navegação interna */
@@ -184,5 +181,4 @@ footer {
     color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
-    margin-top: auto;
 }

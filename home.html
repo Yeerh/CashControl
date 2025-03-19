@@ -28,7 +28,6 @@
 <body>
     <!-- Cabeçalho -->
     <header>
-        <!-- Logo com a imagem de Cash Control ao lado do nome Control Cash -->
         <div class="logo">
             <img src="templates/Cash control.png" alt="Logo Cash Control" class="logo-img">
             <div class="logo-text">
@@ -46,23 +45,21 @@
             </ul>
         </nav>
 
-        <!-- Barra de pesquisa à direita -->
+        <!-- Barra de pesquisa -->
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Pesquisar empresa...">
-                <i class="fas fa-search"></i> <!-- Ícone de lupa -->
+                <i class="fas fa-search"></i>
             </button>
         </div>
 
-        <!-- Ícone de usuário e login no canto direito -->
+        <!-- Ícone de usuário e Login -->
         <div class="login-container">
             <img src="templates/user.png" alt="Ícone de Usuário" class="user-icon">
-            <div class="login-link-container">
-                <a href="#login" class="login-link">Login</a>
-            </div>
+            <a href="#login" class="login-link">Login</a>
         </div>
     </header>
 
-    <!-- Navegação interna para h1 e h2 -->
+    <!-- Navegação interna -->
     <nav class="page-nav">
         <ul>
             <li><a href="#seu-dinheiro" onclick="toggleVisibility('seu-dinheiro')">Seu Dinheiro</a></li>
@@ -80,17 +77,19 @@
                 melhor planejamento. Gerencie seu dinheiro com segurança, receba insights 
                 financeiros e tenha o controle total do seu orçamento em qualquer lugar!
             </p>
-            <button class="cta-button">Cadastre-se agora</button> <!-- Botão de call to action -->
+            <button class="cta-button">Cadastre-se agora</button>
         </section>
 
-        <section class="sidebar" id="controle-financeiro" style="display: none;">
-            <h2>Controle Financeiro na Palma da Sua Mão!</h2>
-            <p>
+        <!-- Seção Controle Financeiro -->
+        <section class="main-content" id="controle-financeiro" style="display: none;">
+            <h1>Controle Financeiro!</h1>
+            <p class="subtitle">
                 Gerencie suas finanças de forma simples e intuitiva com o Control Cash, 
                 você pode adicionar e editar transações, filtrar seus gastos por categoria, 
                 período ou tipo e visualizar tudo de forma clara através de gráficos e 
                 relatórios detalhados. Seja um administrador do seu dinheiro, bem!
             </p>
+            <button class="cta-button">Cadastre-se agora</button>
         </section>
     </main>
 
