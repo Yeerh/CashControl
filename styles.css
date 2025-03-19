@@ -7,7 +7,7 @@
 
 /* Estilo geral */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: #f4f4f4;
     color: #333;
     display: flex;
@@ -31,42 +31,38 @@ header {
     align-items: center;
 }
 
+.logo-img {
+    width: 50px; /* Ajuste o tamanho da imagem conforme necessário */
+    height: auto;
+}
+
 .logo-text {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    margin-right: 10px; /* Espaço entre o texto e a imagem */
+    align-items: center;
+    margin-left: 10px; /* Adiciona um pequeno espaço entre a imagem e o nome */
 }
 
 .logo-control {
-    font-family: 'Poppins', sans-serif;
     font-weight: bold;
     font-size: 2rem;
 }
 
 .logo-cash {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
     font-size: 2rem;
 }
 
-/* Tamanho da imagem */
-.logo-image {
-    width: 80px; /* Ajuste o tamanho da imagem conforme necessário */
-    height: auto;
-}
-
 /* Navegação do cabeçalho */
-nav ul {
+.nav-left ul {
     display: flex;
     list-style: none;
 }
 
-nav ul li {
+.nav-left ul li {
     margin-right: 20px;
 }
 
-nav ul li a {
+.nav-left ul li a {
     color: black;
     text-decoration: none;
     font-weight: bold;
@@ -78,20 +74,41 @@ nav ul li a {
     position: relative;
     display: flex;
     align-items: center;
+    margin-left: 20px; /* Ajuste a barra de pesquisa para ficar mais próxima do nome "empresa" */
 }
 
 .search-input {
-    padding: 8px 30px 8px 10px;
-    font-size: 16px;
-    border-radius: 25px;
+    padding: 10px 35px 10px 15px; /* Aumentei o padding */
+    border-radius: 25px; /* Tornando mais arredondado */
     border: 1px solid #ddd;
-    width: 250px;
+    width: 250px; /* Aumentei a largura */
 }
 
 /* Ícone de usuário */
 .user-icon {
     width: 30px;
     height: 30px;
+    margin-right: 10px; /* Espaçamento à direita para separar da barra de pesquisa */
+}
+
+/* Container de Login */
+.login-container {
+    text-align: center;
+    margin-left: 10px; /* Aproxima o link Login da imagem do usuário */
+}
+
+/* Link de Login */
+.login-link-container {
+    margin-top: 5px;
+}
+
+.login-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    text-align: center;
 }
 
 /* Navegação interna */
@@ -111,7 +128,7 @@ nav ul li a {
 }
 
 .page-nav ul li a {
-    color: #33E59B;
+    color: #000000;
     text-decoration: none;
     font-weight: bold;
     text-transform: uppercase;
@@ -164,7 +181,7 @@ main {
 /* Rodapé */
 footer {
     background-color: #2CC686;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
     padding: 20px;
     margin-top: auto;
