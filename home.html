@@ -4,36 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Control CASH</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Roboto:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <script>
-        // Função para alternar a visibilidade entre o h1 e o h2
-        function toggleVisibility(targetId) {
-            const h1Section = document.getElementById('seu-dinheiro');
-            const h2Section = document.getElementById('controle-financeiro');
-
-            if (targetId === 'seu-dinheiro') {
-                h1Section.style.display = 'block';
-                h2Section.style.display = 'none';
-            } else if (targetId === 'controle-financeiro') {
-                h1Section.style.display = 'none';
-                h2Section.style.display = 'block';
-            }
-        }
-    </script>
 </head>
 <body>
     <!-- Cabeçalho -->
     <header>
-        <!-- Nome Control Cash no canto esquerdo -->
+        <!-- Logo -->
         <div class="logo">
             <div class="logo-text">
                 <span class="logo-control">CONTROL</span>
                 <span class="logo-cash">CASH</span>
             </div>
+            <img src="templates/Cash control.png" alt="Logo Cash Control" class="logo-image">
         </div>
 
-        <!-- Navegação à esquerda de Control Cash -->
-        <nav class="nav-left">
+        <!-- Navegação do cabeçalho -->
+        <nav>
             <ul>
                 <li><a href="#controle">Controle</a></li>
                 <li><a href="#seguranca">Segurança</a></li>
@@ -41,15 +28,12 @@
             </ul>
         </nav>
 
-        <!-- Barra de pesquisa à direita -->
+        <!-- Barra de pesquisa -->
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Pesquisar empresa...">
-            <button class="search-button">
-                <i class="fas fa-search"></i> <!-- Ícone de lupa -->
-            </button>
         </div>
 
-        <!-- Ícone de usuário e login no canto direito -->
+        <!-- Ícone de usuário -->
         <div class="login-container">
             <img src="templates/user.png" alt="Ícone de Usuário" class="user-icon">
             <a href="#login">Login</a>
@@ -83,7 +67,7 @@
                 Gerencie suas finanças de forma simples e intuitiva com o Control Cash, 
                 você pode adicionar e editar transações, filtrar seus gastos por categoria, 
                 período ou tipo e visualizar tudo de forma clara através de gráficos e 
-                relatórios detalhados. Seja um administrador do seu dinheiro!
+                relatórios detalhados. Seja um administrador do seu dinheiro, bem!
             </p>
         </section>
     </main>
@@ -92,8 +76,8 @@
     <footer>
         <p>&copy; 2025 Control Cash - Todos os direitos reservados.</p>
     </footer>
-    
+
     <!-- Link para o FontAwesome (para o ícone de lupa e usuário) -->
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </body>
 </html>
