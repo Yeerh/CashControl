@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Kanit', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #3a9e74;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.sidebar img {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: white;
+    transition: 0.3s ease;
+}
+
+.sidebar nav ul li img {
+    width: 24px;
+    margin-right: 12px; /* Distância entre o ícone e o texto */
+}
+
+.sidebar nav ul li:hover {
+    background-color: #2e7d32; /* Cor de fundo ao passar o mouse */
+    border-radius: 5px;
+}
+
+.sidebar nav ul li:hover img {
+    filter: brightness(1.2); /* Efeito visual no ícone ao passar o mouse */
+}
+
+.dashboard {
+    flex: 1;
+    padding: 20px;
+}
+
+.saldo {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.historico ul {
+    list-style: none;
+    margin-top: 10px;
+}
+
+.historico ul li {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.positivo {
+    background-color: #C8E6C9;
+    color: #2E7D32;
+}
+
+.negativo {
+    background-color: #FFCDD2;
+    color: #C62828;
+}
+
+.grafico {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+}

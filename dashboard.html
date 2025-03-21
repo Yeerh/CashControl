@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Financeiro</title>
+
+    <!-- Fonte Kanit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="dash.css">
+    
+    <!-- Chart.js para gráficos -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <img src="templates/Cash Control.png" alt="CashControl">
+            <nav>
+                <ul>
+                    <li><img src="icons/home.png" alt="Home"> Home</li>
+                    <li><img src="icons/Gráficos.png" alt="Gráficos"> Gráficos</li>
+                    <li><img src="icons/Planilhas.png" alt="Planilhas"> Planilhas</li>
+                    <li><img src="icons/Cálculos.png" alt="Cálculos"> Cálculos</li>
+                    <li><img src="icons/Relatórios.png" alt="Relatórios"> Relatórios</li>
+                    <li><img src="icons/Configurações.png" alt="Configurações"> Configurações</li>
+                    <li><img src="icons/avisos.png" alt="Avisos"> Avisos</li>
+                    <li><img src="icons/perfil.png" alt="Perfil"> Perfil</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="dashboard">
+            <header class="saldo">
+                <span>Seu Saldo: <strong id="saldo">R$1000,50</strong></span>
+                <span class="perfil">👤 Geraldo Metralha</span>
+            </header>
+
+            <section class="grid">
+                <div class="card planilhas">
+                    <h3>SUAS PLANILHAS</h3>
+                    <div class="item">📄 Plano para o apartamento <span class="data">Último acesso: 22/03/25</span></div>
+                </div>
+
+                <div class="card gastos">
+                    <h3>MAIORES GASTOS POR CATEGORIA</h3>
+                    <ul>
+                        <li>🍔 Comidas de rua: <strong>R$100,00</strong></li>
+                        <li>🏍️ Gasto com moto: <strong>R$90,00</strong></li>
+                        <li>🛒 Compras online: <strong>R$60,00</strong></li>
+                    </ul>
+                </div>
+
+                <div class="card historico">
+                    <h3>HISTÓRICO DE TRANSAÇÕES</h3>
+                    <ul id="historico-transacoes">
+                        <!-- Transações serão inseridas dinamicamente -->
+                    </ul>
+                </div>
+
+                <div class="card grafico">
+                    <h3>MAIORES GASTOS POR CATEGORIA</h3>
+                    <canvas id="grafico"></canvas>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Gráfico de Gastos
+            const ctx = document.getElementById('grafico');
+            if (ctx) {
+                new Chart(ctx, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Comidas de rua', 'Compras online', 'Gasto com moto'],
+                        datasets: [{
+                            data: [100, 60, 90],
+                            backgroundColor: ['#2E7D32', '#64B5F6', '#FFB74D']
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        plugins: {
+                            legend: {
+                                position: 'bottom'
+                            }
+                        }
+                    }
+                });
+            } else {
+                console.error("Elemento canvas do gráfico não encontrado!");
+            }
+
+            // Histórico de Transações
+            const transacoes = [
+                { valor: 100, descricao: "Retorno do bingo", data: "22/04/25", tipo: "entrada" },
+                { valor: 40, descricao: "Óleo para moto", data: "20/04/25", tipo: "saida" },
+                { valor: 200, descricao: "Pagamento de cliente", data: "18/04/25", tipo: "entrada" },
+                { valor: 150, descricao: "Depósito na conta poupança", data: "15/04/25", tipo: "saida" }
+            ];
+
+            function atualizarHistorico() {
+                const lista = document.getElementById("historico-transacoes");
+                if (!lista) {
+                    console.error("Elemento histórico de transações não encontrado!");
+                    return;
+                }
+
+                lista.innerHTML = "";
+                transacoes.forEach(transacao => {
+                    const li = document.createElement("li");
+                    li.classList.add(transacao.tipo === "entrada" ? "positivo" : "negativo");
+                    li.innerHTML = `${transacao.tipo === "entrada" ? '✅' : '❌'} R$${transacao.valor.toFixed(2)} - ${transacao.descricao} (${transacao.data})`;
+                    lista.appendChild(li);
+                });
+            }
+
+            atualizarHistorico();
+        });
+    </script>
+</body>
+</html>
