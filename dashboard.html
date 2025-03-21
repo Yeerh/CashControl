@@ -81,14 +81,28 @@
                         labels: ['Comidas de rua', 'Compras online', 'Gasto com moto'],
                         datasets: [{
                             data: [100, 60, 90],
-                            backgroundColor: ['#2E7D32', '#64B5F6', '#FFB74D']
+                            backgroundColor: ['#2E7D32', '#64B5F6', '#FFB74D'], // Mais contraste nas cores
+                            borderColor: '#fff', // Cor de borda para destaque
+                            borderWidth: 2
                         }]
                     },
                     options: {
                         responsive: true,
                         plugins: {
                             legend: {
-                                position: 'bottom'
+                                position: 'bottom',
+                                labels: {
+                                    font: {
+                                        size: 14
+                                    }
+                                }
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(tooltipItem) {
+                                        return `${tooltipItem.label}: R$${tooltipItem.raw.toFixed(2)}`;
+                                    }
+                                }
                             }
                         }
                     }

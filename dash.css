@@ -30,7 +30,6 @@ body {
 
 .sidebar nav ul {
     list-style: none;
-    padding: 0;
 }
 
 .sidebar nav ul li {
@@ -38,23 +37,11 @@ body {
     align-items: center;
     padding: 10px;
     cursor: pointer;
-    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
-    color: white;
-    transition: 0.3s ease;
 }
 
 .sidebar nav ul li img {
     width: 24px;
-    margin-right: 12px; /* Distância entre o ícone e o texto */
-}
-
-.sidebar nav ul li:hover {
-    background-color: #2e7d32; /* Cor de fundo ao passar o mouse */
-    border-radius: 5px;
-}
-
-.sidebar nav ul li:hover img {
-    filter: brightness(1.2); /* Efeito visual no ícone ao passar o mouse */
+    margin-right: 10px;
 }
 
 .dashboard {
@@ -109,4 +96,32 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 300px;
+}
+
+.card h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.card ul {
+    list-style: none;
+}
+
+.card ul li {
+    font-size: 16px;
+    padding: 8px;
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.card .item {
+    font-size: 16px;
+    color: #666;
+}
+
+.card .data {
+    font-size: 14px;
+    color: #999;
 }
